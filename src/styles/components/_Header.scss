@@ -1,0 +1,14 @@
+.m-header {
+  padding: $padding-xl;
+
+  .box {
+    display: inline-block;
+    padding: 0 $padding-s;
+    background-color: $primary-color;
+    color: $white;
+  }
+
+  span {
+    font-weight: $font-extra-light;
+  }
+}
