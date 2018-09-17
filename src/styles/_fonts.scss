@@ -1,24 +1,103 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700|Roboto+Mono:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700');
 
-$primary-font: 'Montserrat', sans-serif;
-$secondary-font: 'Roboto Mono', monospace;
+$primary-font: 'Source Serif Pro', serif;;
+$secondary-font: 'Source Serif Pro', serif;;
 
-$font-xxl: rem(100px);
-$font-xl: rem(50px);
-$font-l: rem(40px);
-$font-s: rem(30px);
-$font-xs: rem(25px);
-$font-xxs: rem(18px);
+$font-size-xxl: 80px;
+$font-size-xl: 44px;
+$font-size-l: 28px;
+$font-size-m: 24px;
+$font-size-s: 20px;
+$font-size-xs: 16px;
+$font-size-xxs: 12px;
 
-$font-extra-light: 200;
-$font-light: 400;
-$font-semi: 600;
-$font-bold: 700;
+.text {
+  &.-font-xxl {
+    font-size: $font-size-xl;
 
-.primary-font {
-  font-family: $primary-font;
-}
+    @media screen and (min-width: $screen-m) {
+      font-size: $font-size-xxl;
+    }
+  }
 
-.secondary-font {
-  font-family: $secondary-font;
+  &.-font-xl {
+    font-size: $font-size-l;
+
+    @media screen and (min-width: $screen-m) {
+      font-size: $font-size-xl;
+    }
+  }
+
+  &.-font-l {
+    font-size: $font-size-m;
+
+    @media screen and (min-width: $screen-m) {
+      font-size: $font-size-l;
+    }
+  }
+
+  &.-font-m {
+    font-size: $font-size-s;
+
+    @media screen and (min-width: $screen-m) {
+      font-size: $font-size-m;
+    }
+  }
+
+  &.-font-s {
+    font-size: $font-size-xs;
+
+    @media screen and (min-width: $screen-m) {
+      font-size: $font-size-s;
+    }
+  }
+
+  &.-font-xs {
+    font-size: $font-size-xxs;
+
+    @media screen and (min-width: $screen-m) {
+      font-size: $font-size-xs;
+    }
+  }
+
+  &.-font-xxs {
+    font-size: $font-size-xxs;
+  }
+
+  &.-black {
+    color: $black;
+  }
+
+  &.-white {
+    color: $white;
+  }
+
+  &.-primary-color {
+    color: $primary-color;
+  }
+
+  &.-center {
+    text-align: center;
+  }
+
+  &.-underline {
+    text-decoration: underline;
+  }
+
+  &.-bold {
+    font-weight: 700;
+  }
+
+  &.-primary-font {
+    font-family: $primary-font;
+  }
+
+  &.-line-through {
+    text-decoration: line-through;
+  }
+
+  &.-disabled-menu {
+    opacity: .5;
+    cursor: not-allowed;
+  }
 }

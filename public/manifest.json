@@ -1,6 +1,6 @@
 {
-  "short_name": "héctor arce",
-  "name": "Create React App Sample",
+  "short_name": "Carniceria",
+  "name": "Carniceria",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,6 +10,6 @@
   ],
   "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "#333",
+  "theme_color": "#000000",
   "background_color": "#ffffff"
 }
