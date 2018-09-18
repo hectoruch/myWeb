@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
+import BottomScrollListener from 'react-bottom-scroll-listener';
 
 import data from '../assets/me.json';
 
 class Home extends Component {
-  componentDidMount() {
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      dataMe: data
+    };
+  }
+
+  updateContent = () => {
+    this.setState({
+      dataMe: this.state.dataMe.concat(data)
+    });
   }
 
   buildLinks = () => {
-    const list = data.map(function (content, index) {
+    const list = this.state.dataMe.map(function (content, index) {
       return (
         <a
           href={content.link}
@@ -26,6 +37,7 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
+        <BottomScrollListener debounce={0} offset={100} onBottom={() => this.updateContent()} />
         {this.buildLinks()}
         <h1 className="text -primary-font -black -bold title">héctor arce de las heras | <a href="http://www.carniceria.org/" target="_blank">carnicería (cto)</a> | <a href="https://www.openbank.es/" target="_blank">openBank (react front end)</a></h1>
       </div>
